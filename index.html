@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Timer & Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Study Timer</h1>
+        </header>
+
+        <main>
+            <!-- Timer Section -->
+            <section class="timer-section">
+                <div class="timer-display">
+                    <span id="minutes">30</span>:<span id="seconds">00</span>
+                </div>
+                <div class="timer-status">
+                    <span id="session-type">Study Time</span>
+                </div>
+                <div class="timer-controls">
+                    <button id="start-btn" class="btn primary">Start</button>
+                    <button id="pause-btn" class="btn">Pause</button>
+                    <button id="reset-btn" class="btn">Reset</button>
+                </div>
+                <div class="timer-settings">
+                    <div class="setting">
+                        <label for="study-time">Study Time (minutes):</label>
+                        <input type="number" id="study-time" value="30" min="1" max="120">
+                    </div>
+                    <div class="setting">
+                        <label for="break-time">Break Time (minutes):</label>
+                        <input type="number" id="break-time" value="5" min="1" max="30">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task Management Section -->
+            <section class="task-section">
+                <h2>Task Diary</h2>
+                <form id="task-form">
+                    <div class="input-group">
+                        <input type="text" id="task-input" placeholder="Enter your task" required>
+                        <input type="datetime-local" id="reminder-time" required>
+                        <button type="submit" class="btn primary">Add Task</button>
+                    </div>
+                </form>
+                <div class="task-list">
+                    <h3>Today's Tasks</h3>
+                    <ul id="tasks"></ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
